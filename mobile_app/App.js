@@ -1,8 +1,9 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet, FlatList } from 'react-native';
 import { ViroARSceneNavigator } from 'react-viro';
 
 import PlayScene from './src/PlayScene';
+import Products from './src/Products';
 
 const styles = StyleSheet.create({
     root: {
@@ -11,12 +12,10 @@ const styles = StyleSheet.create({
     },
 });
 
+
 const App = () => (
     <View style={styles.root}>
-      <Text>Hello</Text>
-        <ViroARSceneNavigator
-            initialScene={{ scene: PlayScene }}
-        />
+      <Products/>
     </View>
 );
 
