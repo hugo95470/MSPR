@@ -6,8 +6,6 @@ pipeline {
             steps {
                 dir('./mobile_app') {
                     echo 'Building...'
-                    sh 'cd mobile_app'
-                    echo "PATH is: ${env.PATH}"
                     sh 'npm install'
                 }
             }
