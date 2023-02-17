@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
+                sh 'cd mobile_app'
                 sh 'npm install'
             }
         }
