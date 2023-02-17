@@ -4,10 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building...'
-                sh 'cd mobile_app'
-                echo "PATH is: ${env.PATH}"
-                sh 'npm install'
+                dir('./mobile_app') {
+                    echo 'Building...'
+                    sh 'cd mobile_app'
+                    echo "PATH is: ${env.PATH}"
+                    sh 'npm install'
+                }
             }
         }
         stage('Test') {
